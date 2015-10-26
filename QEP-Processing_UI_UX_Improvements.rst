@@ -20,13 +20,13 @@ This QEP proposes improvements in the Processing UI to make it more intuitive an
 Rationale
 -------------
 
-Processing is a complex tool and it features a large number of elements. This can be indimidating for some users and rather confusing.
+Processing is a complex tool and it features a large number of elements. This can be intimidating for some users and rather confusing.
 
 To avoid this, a simplified interface was proposed, in which algorithm providers are not shown, and a single "Geoalgorithms" category is added to the toolbox. Not all algorithms are added under that group, but just a selected group of them, and certain algorithms are renamed. 
 
-This has proven to be a bad solution. Users are more confused, and when they find out that some algorithms are in the advanced mode but not in the simplified one, they report that as a bug. Mantaining the simplified interface is also a concern, since sometimes new algorithms are added but the corresponding entry for the simplified version is not added. That causes the algorithm to not be available in the simplified interface.
+This has proven to be a bad solution. Users are more confused, and when they find out that some algorithms are in the advanced mode but not in the simplified one, they report that as a bug. Maintaining the simplified interface is also a concern, since sometimes new algorithms are added but the corresponding entry for the simplified version is not added. That causes the algorithm to not be available in the simplified interface.
 
-Additional problems have been reported, such as the lack of help. This QEP proposes some simple enhancements that might help aliviate that. 
+Additional problems have been reported, such as the lack of help. This QEP proposes some simple enhancements that might help alleviate that. 
 
 Overall, the idea is to make Processing easier to understand. This QEP does not include any new analytical feature or similar improvement.
 
@@ -40,9 +40,9 @@ The following changes are proposed:
 
 - Only show duplicated algorithms if the users explicitly selects that option. Some functionality is repeated, due to several backends having similar algorithms (for instance, there is a slope algorithm in GDAL, SAGA and GRASS). While those algorithms are not identical (and for this reason it is worth keeping all of them), this confuses most users. To avoid that, groups of similar algorithms will be identified, and only one of them will be selected as the main one to be added to the toolbox. The remaining ones will be labeled as alternatives. In the Processing options, a new option will be added to enable showing all alternatives, in case an advanced user wants to do so.
 
-- Add a small help panel to the algorithm dialog. Currently, the algorithm panel has a help tab. This has two problems: the first one is that help is not seen inmediately after opening the dialog. The second, and most important one, is that the help is lacking for most algorithms, and a help template with parameter names is shown instead.
+- Add a small help panel to the algorithm dialog. Currently, the algorithm panel has a help tab. This has two problems: the first one is that help is not seen immediately after opening the dialog. The second, and most important one, is that the help is lacking for most algorithms, and a help template with parameter names is shown instead.
 
-	Writing help files for all algorithms is a very long task, and we have not been succesful at it. It looks like full description of algorithms will not be available anytime soon. Instead of waiting for that and maintaining the help tab for a detailed algorithm content, a smaller panel is proposed. It would be placed in the side of the algorithm dialog, and it would display a short description of the algorithm. Having such a description for most algorithms (or at least for the ones in the "QGIS algorithms" group) is much more realistic and feasible. For those algorithms that have a full help file, a "more info" link can be provided, which would open the corresponding page in the QGIS documentation.
+	Writing help files for all algorithms is a very long task, and we have not been successful at it. It looks like full description of algorithms will not be available anytime soon. Instead of waiting for that and maintaining the help tab for a detailed algorithm content, a smaller panel is proposed. It would be placed in the side of the algorithm dialog, and it would display a short description of the algorithm. Having such a description for most algorithms (or at least for the ones in the "QGIS algorithms" group) is much more realistic and feasible. For those algorithms that have a full help file, a "more info" link can be provided, which would open the corresponding page in the QGIS documentation.
 
 See the picture below for an example
 
